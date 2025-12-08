@@ -4,30 +4,30 @@
 #include <time.h>
 #include "cassebrique.h"
 
-void remplirTableau(char tab[50][30]){
-    for (int i = 0; i < 50; i++){
-        for (int j = 0; j < 30; j++){
+void remplirTableau(char tab[30][50]){
+    for (int i = 0; i < 30; i++){
+        for (int j = 0; j < 50; j++){
             tab[i][j] = ' ';
         }
     }
 }
 
-void afficherTableau(char tab[50][30]){
-    for (int i = 0; i < 50; i++){
-        for (int j = 0; j < 30; j++){
+void afficherTableau(char tab[30][50]){
+    for (int i = 0; i < 30; i++){
+        for (int j = 0; j < 50; j++){
             printf("%c", tab[i][j]);
         }
         printf("\n");
     }
 }
 
-void TableauDeBase(char tab[50][30]){
-    tab[45][15] = 'O';
-    for (int i = 13; i < 18; i++){
-        tab[46][i] = '=';
+void TableauDeBase(char tab[30][50]){
+    tab[25][25] = 'O';
+    for (int i = 23; i < 28; i++){
+        tab[26][i] = '=';
     }
     for (int i = 0; i < 2; i++){     
-        for (int j = 0; j < 30; j++){                   
+        for (int j = 0; j < 50; j++){                   
             tab[i][j] = '#';
         }
     }
