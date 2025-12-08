@@ -62,7 +62,8 @@ char input()
     return 0; // sinon renvoie rien
 }
 
-void updateTableau(char tab[30][50], int posballe_X, int posballe_Y){
+void updateTableau(char tab[30][50], int posballe_X, int posballe_Y)
+{
     int balleX = 25;
     int balleY = 26;
     int dx = -1;
@@ -82,8 +83,10 @@ void updateTableau(char tab[30][50], int posballe_X, int posballe_Y){
     {
         dy = -1;
 
-        if (balleX == 23) dx = -1;
-        else if (balleX == 23 + 4) dx = 1;
+        if (balleX == 23)
+            dx = -1;
+        else if (balleX == 23 + 4)
+            dx = 1;
     }
 
     tab[balleY][balleX] = 'O';
