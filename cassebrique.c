@@ -62,3 +62,30 @@ char input()
     }
     return 0; // sinon renvoie rien
 }
+
+void updateTableau(char tab[30][50] ,int posballe_X ,int posballe_Y){
+    tab[posballe_X][posballe_Y] = ' ';
+    int dx = -1;
+    int dy = -1;
+    int T = 0
+
+
+    posballe_X += dx;
+    posballe_Y += dy;
+
+   
+    if (posballe_X <= 1 || posballe_X >= 48)
+        dx = -dx;
+
+    if (posballe_Y <= 1)
+        dy = -dy;
+
+    if (posballe_Y == 26 && posballe_X >= T && posballe_X <= T + 4)
+    {
+        dy = -1;
+        if (posballe_X == T) dx = -1;
+        else if (posballe_X == T + 4) dx = 1;
+    }
+
+    tab[posballe_Y][posballe_X] = 'O';
+}
