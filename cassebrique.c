@@ -52,31 +52,30 @@ void TableauDeBase(char tab[30][50])
     }
 }
 
-void updateTableau(char tab[30][50], int posballe_X, int posballe_Y,int posPlanche){
-    tab[posballe_Y][posballe_X] = ' ';
+void updateTableau(char tab[30][50], int *posballe_X, int *posballe_Y, int posPlanche)
+{
+    tab[*posballe_Y][*posballe_X] = ' ';
 
-    posballe_X += dx;
-    posballe_Y += dy;
+    *posballe_X += dx;
+    *posballe_Y += dy;
 
-    if (posballe_X <= 1 || posballe_X >= 48){
+    if (*posballe_X <= 1 || *posballe_X >= 48){
         dx = -dx;
     }
-        
 
-    if (posballe_Y <= 1){
+    if (*posballe_Y <= 1){
         dy = -dy;
     }
-        
 
-    if (posballe_Y == 26 && posballe_X >= posPlanche && posballe_X <= posPlanche + 4){
+    if (*posballe_Y == 26 && *posballe_X >= posPlanche && *posballe_X <= posPlanche + 4){
         dy = -1;
-        if (posballe_X == posPlanche){
+        if (*posballe_X == posPlanche){
             dx = -1;
         }
-        else if (posballe_X == posPlanche+4){
+        else if (*posballe_X == posPlanche + 4){
             dx = 1;
         }
     }
 
-    tab[posballe_Y][posballe_X] = 'O';
+    tab[*posballe_Y][*posballe_X] = 'O';
 }
