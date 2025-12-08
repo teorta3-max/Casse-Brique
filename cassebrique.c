@@ -27,9 +27,8 @@ void TableauDeBase(char tab[50][30]){
         tab[46][i] = '=';
     }
     for (int i = 0; i < 2; i++){     
-        for (int j = 0; j < 30; j++){    
-            if (j % 5 == 0)                
-                tab[i][j] = '#';
+        for (int j = 0; j < 30; j++){                   
+            tab[i][j] = '#';
         }
     }
 }
