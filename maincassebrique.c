@@ -19,4 +19,5 @@ int main()
     remplirTableau(grille);
     TableauDeBase(grille);
     afficherTableau(grille);
+    updateTableau(grille , posBall_x , posBall_y)
 }
