@@ -21,11 +21,23 @@ int main() {
 
     while (1) {
         if (_kbhit()) {
-            char c = _getch();
-            if (c == 'q' && posPlat_x > 1) posPlat_x--;
-            else if (c == 'd' && posPlat_x < 45) posPlat_x++;
-            else if (c == 'x') break;
+    char touche = _getch();
+
+    if (touche == 'q') {
+        if (posPlat_x > 1) {
+            posPlat_x--;
         }
+    }
+    else if (touche == 'd') {
+        if (posPlat_x < 45) {
+            posPlat_x++;
+        }
+    }
+
+    else if (touche == 's') {
+        break;
+    }
+}
 
         updateTableau(grille, posBall_x, posBall_y, posPlat_x);
 
