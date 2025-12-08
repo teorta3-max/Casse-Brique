@@ -71,14 +71,18 @@ void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlan
         dy = -dy;
     }
 
-    if (balleY == 26 && balleX >= posPlanche && balleX <= posPlanche + 4)
+    if (balleY == 26 && balleX >= posPlanche - 2 && balleX <= posPlanche +2)
     {
         dy = -1;
         if (balleX == posPlanche)
         {
+            dx = 0;
+        }
+        else if (balleX > posPlanche)
+        {
             dx = -1;
         }
-        else if (balleX == posPlanche + 4)
+        else if (balleX < posPlanche)
         {
             dx = 1;
         }
