@@ -3,9 +3,9 @@
 
 int input()
 {
-    if (khbhit())
+    if (khbhit()) // lit l'input de l'utilisateur
     {
-        return (char)getch();
+        return (char)getch(); // le renvoie
     }
-    return 0;
+    return 0; // sinon renvoie rien
 }
