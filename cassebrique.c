@@ -26,3 +26,20 @@ void afficherTableau(char tab[50][30])
         printf("\n");
     }
 }
+
+void TableauDeBase(char tab[50][30])
+{
+    tab[45][15] = 'O';
+    for (int i = 13; i < 18; i++)
+    {
+        tab[46][i] = '=';
+    }
+    char brik = "|###|";
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j; j < 30; j += 5)
+        {
+            tab[i][j] = brik;
+        }
+    }
+}
