@@ -26,7 +26,7 @@ void TableauDeBase(char tab[30][50]){
     for (int i = 23; i < 28; i++){
         tab[26][i] = '=';
     }
-    for (int i = 0; i < 2; i++){     
+    for (int i = 1; i < 3; i++){     
         for (int j = 0; j < 50; j++){                   
             tab[i][j] = '#';
         }
