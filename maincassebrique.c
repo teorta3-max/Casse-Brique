@@ -11,6 +11,7 @@ int main() {
     int posPlat_y = 27;
     int posBall_x = 25;
     int posBall_y = 26;
+    int fin = 0;
 
     srand(time(NULL));
 
@@ -19,25 +20,8 @@ int main() {
     grille[posBall_y][posBall_x] = 'O';
     afficherTableau(grille);
 
-    while (1) {
-        if (_kbhit()) {
-    char touche = _getch();
-
-    if (touche == 'q') {
-        if (posPlat_x > 1) {
-            posPlat_x--;
-        }
-    }
-    else if (touche == 'd') {
-        if (posPlat_x < 45) {
-            posPlat_x++;
-        }
-    }
-
-    else if (touche == 's') {
-        break;
-    }
-}
+    while (fin == 0) {
+        action(posPlat_x,fin);
 
         updateTableau(grille, posBall_x, posBall_y, posPlat_x);
 

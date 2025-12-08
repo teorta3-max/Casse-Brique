@@ -51,14 +51,6 @@ void TableauDeBase(char tab[30][50]){
     }
 }
 
-char input()
-{
-    if (_kbhit())
-        return (char)_getch();
-    
-    return 0;
-}
-
 void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlanche){
     tab[balleY][balleX] = ' ';
 
@@ -79,4 +71,24 @@ void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlan
     }
 
     tab[balleY][balleX] = 'O';
+}
+
+void action(int posPlat_x, int fin){
+    if (_kbhit()) {
+            char touche = _getch();
+            if (touche == 'q') {
+                if (posPlat_x > 1) {
+                    posPlat_x--;
+            }
+        }
+        else if (touche == 'd') {
+            if (posPlat_x < 45) {
+                posPlat_x++;
+            }
+        }
+
+        else if (touche == 's') {
+            fin = 1;
+        }
+    }
 }
