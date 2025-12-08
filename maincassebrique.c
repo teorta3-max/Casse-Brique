@@ -7,6 +7,7 @@ int main()
 {
     /*Initialisation des valeurs*/
     char grille[30][50];
+    int loop = 1;
     int dep_x = 0; // valeur de déplacement horizontale
     int dep_y = 0; // verticale
     int posPlat_x; // position platforme
@@ -16,7 +17,7 @@ int main()
 
     remplirTableau(grille);
     TableauDeBase(grille);
-<<<<<<< HEAD
+
     while (loop == 1)
     {
         system("cls");
@@ -24,8 +25,4 @@ int main()
         afficherTableau(grille);
         Sleep(100);
     }
-=======
-    afficherTableau(grille);
-
->>>>>>> 688f58e1cf659b3ae47b8afbd4b30a042dd9d79b
 }

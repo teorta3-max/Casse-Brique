@@ -54,31 +54,60 @@ void TableauDeBase(char tab[30][50])
     }
 }
 
-void updateTableau(char tab[30][50], int posballe_X, int posballe_Y,int posPlanche){
+void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlanche)
+{
     tab[balleY][balleX] = ' ';
 
     balleX += dx;
     balleY += dy;
 
-    if (balleX <= 1 || balleX >= 48){
+    if (balleX <= 1 || balleX >= 48)
+    {
         dx = -dx;
     }
-        
 
-    if (balleY <= 1){
+    if (balleY <= 1)
+    {
         dy = -dy;
     }
-        
 
-    if (balleY == 26 && balleX >= posPlanche && balleX <= posPlanche + 4){
+    if (balleY == 26 && balleX >= posPlanche && balleX <= posPlanche + 4)
+    {
         dy = -1;
-        if (balleX == posPlanche){
+        if (balleX == posPlanche)
+        {
             dx = -1;
         }
-        else if (balleX == posPlanche+4){
+        else if (balleX == posPlanche + 4)
+        {
             dx = 1;
         }
     }
 
     tab[balleY][balleX] = 'O';
+}
+
+char input()
+{
+    if (_kbhit())
+    {
+        return (char)_getch();
+    }
+    return 0;
+}
+
+int analyze_input(char input)
+{
+    if (input = "q" || input = "a")
+    {
+        return -1;
+    }
+    else if (input = "d")
+    {
+        return +1
+    }
+    else
+    {
+        return 0;
+    }
 }
