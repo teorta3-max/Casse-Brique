@@ -15,4 +15,6 @@ int main()
     int posBall_y;
 
     remplirTableau(grille);
+    TableauDeBase(grille);
+    afficherTableau(grille);
 }
