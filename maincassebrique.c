@@ -25,5 +25,6 @@ int main()
         system("cls");
         updateTableau(grille, posBall_x, posBall_y, posPlat_x);
         afficherTableau(grille);
+        loop = quit(loop, input());
     }
 }
