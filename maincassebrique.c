@@ -14,5 +14,6 @@ int main()
     int posBall_x; // position Balle
     int posBall_y;
 
+    /*setup du tableau*/
     remplirTableau(grille);
 }
