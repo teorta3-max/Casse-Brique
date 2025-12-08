@@ -1,7 +1,7 @@
 #include <conio.h>
 #include <stdio.h>
 
-int input()
+char input()
 {
     if (khbhit()) // lit l'input de l'utilisateur
     {
