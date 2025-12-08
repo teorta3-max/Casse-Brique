@@ -99,13 +99,13 @@ char input()
     return 0;
 }
 
-int analyze_input(char input)
+int analyze_input(char input, int pos)
 {
-    if (input == 'q' || input == 'a')
+    if (input == 'q' && pos != 4 || input == 'a' && pos != 4)
     {
         return +1;
     }
-    else if (input == 'd')
+    else if (input == 'd' && pos != 46)
     {
         return -1;
     }
