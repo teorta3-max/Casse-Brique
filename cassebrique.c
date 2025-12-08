@@ -1,5 +1,7 @@
 #include "cassebrique.h"
 
+int balleX = 25;
+int balleY = 26;
 int dx = -1;
 int dy = -1;
 
@@ -52,30 +54,31 @@ void TableauDeBase(char tab[30][50])
     }
 }
 
-void updateTableau(char tab[30][50], int *posballe_X, int *posballe_Y, int posPlanche)
-{
-    tab[*posballe_Y][*posballe_X] = ' ';
+void updateTableau(char tab[30][50], int posballe_X, int posballe_Y,int posPlanche){
+    tab[balleY][balleX] = ' ';
 
-    *posballe_X += dx;
-    *posballe_Y += dy;
+    balleX += dx;
+    balleY += dy;
 
-    if (*posballe_X <= 1 || *posballe_X >= 48){
+    if (balleX <= 1 || balleX >= 48){
         dx = -dx;
     }
+        
 
-    if (*posballe_Y <= 1){
+    if (balleY <= 1){
         dy = -dy;
     }
+        
 
-    if (*posballe_Y == 26 && *posballe_X >= posPlanche && *posballe_X <= posPlanche + 4){
+    if (balleY == 26 && balleX >= posPlanche && balleX <= posPlanche + 4){
         dy = -1;
-        if (*posballe_X == posPlanche){
+        if (balleX == posPlanche){
             dx = -1;
         }
-        else if (*posballe_X == posPlanche + 4){
+        else if (balleX == posPlanche+4){
             dx = 1;
         }
     }
 
-    tab[*posballe_Y][*posballe_X] = 'O';
+    tab[balleY][balleX] = 'O';
 }
