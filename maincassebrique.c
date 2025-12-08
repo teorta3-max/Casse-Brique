@@ -20,11 +20,11 @@ int main()
 
     while (loop == 1)
     {
-        Sleep(100);
-        posPlat_x -= analyze_input(input(), posPlat_x, loop);
-        system("cls");
-        updateTableau(grille, posBall_x, posBall_y, posPlat_x);
+        system("cls");                                          // rafraichissement de l'ecran
+        updateTableau(grille, posBall_x, posBall_y, posPlat_x); // mise a jour du tableau
         afficherTableau(grille);
-        loop = quit(loop, input());
+        loop = quit(loop, input());                           // end of loop condition
+        Sleep(100);                                           // Sleep pour rendre le jeux moins rapide
+        posPlat_x -= analyze_input(input(), posPlat_x, loop); // ajustement de la position de la platforme
     }
 }
