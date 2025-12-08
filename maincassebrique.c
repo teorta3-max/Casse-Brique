@@ -7,16 +7,15 @@
 int main()
 {
     char grille[30][50];
-    int posPlat_x = 23;
-    int posPlat_y = 27;
-    int posBall_x = 25;
-    int posBall_y = 26;
+    int posPlat_x ;
+    int posPlat_y ;
+    int posBall_x ;
+    int posBall_y ;
 
     srand(time(NULL));
 
     remplirTableau(grille);
     TableauDeBase(grille);
-    grille[posBall_y][posBall_x] = 'O';
     afficherTableau(grille);
 
     while (1)
