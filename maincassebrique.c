@@ -21,5 +21,4 @@ int main()
     afficherTableau(grille);
 
     /*déplacement*/
-    if ()
 }
