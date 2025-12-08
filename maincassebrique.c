@@ -9,8 +9,8 @@ int main()
     int dep_y = 0; // verticale
     int posPlat_x; // position platforme
     int posPlat_y;
-    int posBall_x; // position Balle
-    int posBall_y;
+    int posBall_x = 25; // position Balle
+    int posBall_y = 26;
 
     remplirTableau(grille);
     TableauDeBase(grille);
