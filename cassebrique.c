@@ -61,7 +61,7 @@ char input(){
 }
 
 void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlanche){
-tab[balleY][balleX] = ' ';
+    tab[balleY][balleX] = ' ';
 
     balleX += dx;
     balleY += dy;
