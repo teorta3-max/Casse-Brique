@@ -1,4 +1,3 @@
-#include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -63,29 +62,29 @@ char input()
     return 0; // sinon renvoie rien
 }
 
-void updateTableau(char tab[30][50] ,int posballe_X ,int posballe_Y){
-    tab[posballe_X][posballe_Y] = ' ';
+void updateTableau(char tab[30][50], int posballe_X, int posballe_Y){
+    int balleX = 25;
+    int balleY = 26;
     int dx = -1;
     int dy = -1;
-    int T = 0
+    tab[balleY][balleX] = ' ';
 
+    balleX += dx;
+    balleY += dy;
 
-    posballe_X += dx;
-    posballe_Y += dy;
-
-   
-    if (posballe_X <= 1 || posballe_X >= 48)
+    if (balleX <= 1 || balleX >= 48)
         dx = -dx;
 
-    if (posballe_Y <= 1)
+    if (balleY <= 1)
         dy = -dy;
 
-    if (posballe_Y == 26 && posballe_X >= T && posballe_X <= T + 4)
+    if (balleY == 26 && balleX >= 23 && balleX <= 23 + 4)
     {
         dy = -1;
-        if (posballe_X == T) dx = -1;
-        else if (posballe_X == T + 4) dx = 1;
+
+        if (balleX == 23) dx = -1;
+        else if (balleX == 23 + 4) dx = 1;
     }
 
-    tab[posballe_Y][posballe_X] = 'O';
+    tab[balleY][balleX] = 'O';
 }
