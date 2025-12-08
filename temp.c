@@ -11,3 +11,9 @@ if (input() == "d")
 {
     posPlat_x = +1; // inverse
 }
+
+while (loop == 1)
+{
+    afficherTableau(grille);
+    system("cls");
+}
