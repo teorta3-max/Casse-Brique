@@ -56,9 +56,9 @@ void TableauDeBase(char tab[30][50])
 
 char input()
 {
-    if (khbhit()) // lit l'input de l'utilisateur
+    if (_kbhit()) // lit l'input de l'utilisateur
     {
-        return (char)getch(); // le renvoie
+        return (char)_getch(); // le renvoie
     }
     return 0; // sinon renvoie rien
 }
