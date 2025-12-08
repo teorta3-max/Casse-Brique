@@ -22,9 +22,9 @@ void afficherTableau(char tab[30][50]){
 }
 
 void TableauDeBase(char tab[30][50]){
-    tab[25][25] = 'O';
+    tab[26][25] = 'O';
     for (int i = 23; i < 28; i++){
-        tab[26][i] = '=';
+        tab[27][i] = '=';
     }
     for (int i = 1; i < 3; i++){     
         for (int j = 0; j < 50; j++){                   
@@ -32,7 +32,7 @@ void TableauDeBase(char tab[30][50]){
         }
     }
     for (int i = 0; i < 50; i++){
-        tab[30][i] = '_';
+        tab[29][i] = '_';
         tab[0][i] = '_';
     }
 }
