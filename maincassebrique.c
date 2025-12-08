@@ -1,12 +1,9 @@
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include "cassebrique.h"
 
 int main()
 {
     /*Initialisation des valeurs*/
+    int loop = 1;
     char grille[30][50];
     int dep_x = 0; // valeur de déplacement horizontale
     int dep_y = 0; // verticale
@@ -17,6 +14,10 @@ int main()
 
     remplirTableau(grille);
     TableauDeBase(grille);
-    afficherTableau(grille);
-
+    while (loop == 1)
+    {
+        system("cls");
+        afficherTableau(grille);
+        Sleep(100);
+    }
 }
