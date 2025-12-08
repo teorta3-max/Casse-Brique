@@ -86,8 +86,8 @@ void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlan
     for (int i = -2; i < 3; i++)
     {
         tab[27][posPlanche + i] = '=';
-        tab[27][posPlanche-3] = ' ';
-        tab[27][posPlanche+3] = ' ';
+        tab[27][posPlanche - 3] = ' ';
+        tab[27][posPlanche + 3] = ' ';
     }
     tab[balleY][balleX] = 'O';
 }
@@ -111,12 +111,17 @@ int analyze_input(char input, int pos, int loop)
     {
         return -1;
     }
-    else if (input == 's')
-    {
-        loop = 0;
-    }
     else
     {
         return 0;
     }
+}
+
+int quit(int loop, char input)
+{
+    if (input == 's')
+    {
+        return 0;
+    }
+    return 1;
 }
