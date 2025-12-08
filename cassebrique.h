@@ -3,4 +3,5 @@
 
 void remplirTableau (char tab[50][30]);
 void afficherTableau(char tab[50][30]);
+void TableauDeBase (char tab[50][30]);
 #endif
