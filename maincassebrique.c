@@ -1,43 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <windows.h>
 #include "cassebrique.h"
 
 int main()
 {
+    /*Initialisation des valeurs*/
     char grille[30][50];
-    int posPlat_x ;
-    int posPlat_y ;
-    int posBall_x ;
-    int posBall_y ;
-
-    srand(time(NULL));
+    int dep_x = 0; // valeur de déplacement horizontale
+    int dep_y = 0; // verticale
+    int posPlat_x; // position platforme
+    int posPlat_y;
+    int posBall_x; // position Balle
+    int posBall_y;
 
     remplirTableau(grille);
     TableauDeBase(grille);
     afficherTableau(grille);
 
-    while (1)
-    {
-        if (_kbhit())
-        {
-            char c = _getch();
-            if (c == 'q' && posPlat_x > 1)
-                posPlat_x--;
-            else if (c == 'd' && posPlat_x < 45)
-                posPlat_x++;
-            else if (c == 'x')
-                break;
-        }
-
-        updateTableau(grille, posBall_x, posBall_y, posPlat_x);
-
-        system("cls");
-        afficherTableau(grille);
-
-        Sleep(100);
-    }
-
-    return 0;
 }
