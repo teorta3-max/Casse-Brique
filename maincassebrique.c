@@ -19,14 +19,4 @@ int main()
     remplirTableau(grille);
     TableauDeBase(grille);
     afficherTableau(grille);
-
-    /*déplacement*/
-    if (input() == "q")
-    {
-        posPlat_x = -1;
-    }
-    if (input() == "d")
-    {
-        posPlat_x = +1;
-    }
 }

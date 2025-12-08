@@ -1,11 +1,13 @@
 #include <conio.h>
 #include <stdio.h>
 
-char input()
+/*déplacement*/
+
+if (input() == "q")
 {
-    if (khbhit()) // lit l'input de l'utilisateur
-    {
-        return (char)getch(); // le renvoie
-    }
-    return 0; // sinon renvoie rien
+    posPlat_x = -1; // si input est égal à q la position de la platforme bouge vers la gauche
+}
+if (input() == "d")
+{
+    posPlat_x = +1; // inverse
 }
