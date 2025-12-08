@@ -35,8 +35,8 @@ void TableauDeBase(char tab[30][50]){
         tab[29][i] = '_';
         tab[0][i] = '_';
     }
-    for (int i = 0; i < 30; i++){
+    for (int i = 1; i < 30; i++){
         tab[i][0] = '|';
-        tab[i][50] = '|';
+        tab[i][49] = '|';
     }
 }
