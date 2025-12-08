@@ -16,4 +16,6 @@ int main()
 
     /*setup du tableau*/
     remplirTableau(grille);
+    TableauDeBase(grille);
+    afficherTableau(grille);
 }
