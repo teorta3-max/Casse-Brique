@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-=======
->>>>>>> 7e75f68ed9c816fda26c280188013c4db65aefc8
 #include "cassebrique.h"
 
 int main()
