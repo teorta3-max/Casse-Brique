@@ -4,8 +4,9 @@
 
 void remplirTableau(char tab[30][50]);
 void afficherTableau(char tab[30][50]);
+void updateTableau(char tab[30][50] ,int posplat_X ,int postplatY, int posPlanche);
 void TableauDeBase(char tab[30][50]);
-void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlanche);
-void action(int posPlat_x, int fin);
 char input();
+void action(int posPlat_x, int fin);
+
 #endif
