@@ -1,29 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <conio.h>
 #include "cassebrique.h"
 
 int main() {
-    /* Initialisation des valeurs */
     char grille[30][50];
-    int posPlat_x = 23; // position initiale de la plateforme
-    int posPlat_y = 27; // ligne de la plateforme
-    int posBall_x = 25; // position initiale de la balle
+    int posPlat_x = 23;
+    int posPlat_y = 27;
+    int posBall_x = 25;
     int posBall_y = 26;
 
-    /* Setup du tableau */
+    srand(time(NULL));
+
     remplirTableau(grille);
     TableauDeBase(grille);
-    
-    // Placer la balle initialement
+
     grille[posBall_y][posBall_x] = 'O';
 
     afficherTableau(grille);
 
-    // Exemple de mise à jour
-    updateTableau(grille, posBall_x, posBall_y, posPlat_x);
+    while (1) {
+        if (_kbhit()) {
+            char c = _getch();
+            if (c == 'q' && posPlat_x > 1) {
+                posPlat_x--;
+            } else if (c == 'd' && posPlat_x < 45) {
+                posPlat_x++;
+            } else if (c == 'x') {
+                break;
+            }
+        }
 
-    afficherTableau(grille);
+        updateTableau(grille, posBall_x, posBall_y, posPlat_x);
+
+        system("cls"); 
+        afficherTableau(grille);
+
+        _sleep(100);
 
     return 0;
+    }
 }
