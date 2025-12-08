@@ -6,7 +6,7 @@
 int main()
 {
     /*Initialisation des valeurs*/
-    char grille[50][30];
+    char grille[30][50];
     int dep_x = 0; // valeur de déplacement horizontale
     int dep_y = 0; // verticale
     int posPlat_x; // position platforme
