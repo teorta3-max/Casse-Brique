@@ -17,7 +17,7 @@ int main()
     while (loop == 1)
     {
         system("cls");
-        updateTableau(grille, &posBall_x, &posBall_y, posPlat_x);
+        updateTableau(grille, posBall_x, posBall_y, posPlat_x);
         afficherTableau(grille);
         Sleep(100);
     }
