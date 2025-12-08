@@ -8,9 +8,9 @@ int main()
     /*Initialisation des valeurs*/
     char grille[30][50];
     int loop = 1;
-    int dep_x = 0; // valeur de déplacement horizontale
-    int dep_y = 0; // verticale
-    int posPlat_x; // position platforme
+    int dep_x = 0;      // valeur de déplacement horizontale
+    int dep_y = 0;      // verticale
+    int posPlat_x = 25; // position platforme
     int posPlat_y;
     int posBall_x; // position Balle
     int posBall_y;
