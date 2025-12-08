@@ -70,7 +70,12 @@ void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlan
     {
         dy = -dy;
     }
-
+    // Colition avec les blocs
+    if (tab[balleY-1][balleX] == '#'){
+        dy = -dy;
+        tab[balleY-1][balleX] = ' ';
+    }
+    // Collision avec la planche
     if (balleY == 26 && balleX >= posPlanche - 2 && balleX <= posPlanche +2)
     {
         dy = -1;
@@ -87,12 +92,13 @@ void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlan
             dx = 1;
         }
     }
-    for (int i = -2; i < 3; i++)
-    {
+    for (int i = -2; i < 3; i++){
         tab[27][posPlanche + i] = '=';
         tab[27][posPlanche - 3] = ' ';
         tab[27][posPlanche + 3] = ' ';
     }
+    
+    
     tab[balleY][balleX] = 'O';
 }
 
