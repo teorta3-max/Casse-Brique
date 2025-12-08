@@ -20,6 +20,7 @@ int main()
 
     while (loop == 1)
     {
+        analyze_input(posPlat_x);
         system("cls");
         updateTableau(grille, posBall_x, posBall_y, posPlat_x);
         afficherTableau(grille);
