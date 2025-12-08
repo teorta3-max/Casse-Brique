@@ -102,7 +102,7 @@ int analyze_input(char input)
     {
         return -1;
     }
-    else if (input = 'd')
+    else if (input == 'd')
     {
         return +1;
     }
