@@ -4,39 +4,60 @@
 #include <time.h>
 #include "cassebrique.h"
 
-void remplirTableau(char tab[30][50]){
-    for (int i = 0; i < 30; i++){
-        for (int j = 0; j < 50; j++){
+void remplirTableau(char tab[30][50])
+{
+    for (int i = 0; i < 30; i++)
+    {
+        for (int j = 0; j < 50; j++)
+        {
             tab[i][j] = ' ';
         }
     }
 }
 
-void afficherTableau(char tab[30][50]){
-    for (int i = 0; i < 30; i++){
-        for (int j = 0; j < 50; j++){
+void afficherTableau(char tab[30][50])
+{
+    for (int i = 0; i < 30; i++)
+    {
+        for (int j = 0; j < 50; j++)
+        {
             printf("%c", tab[i][j]);
         }
         printf("\n");
     }
 }
 
-void TableauDeBase(char tab[30][50]){
+void TableauDeBase(char tab[30][50])
+{
     tab[26][25] = 'O';
-    for (int i = 23; i < 28; i++){
+    for (int i = 23; i < 28; i++)
+    {
         tab[27][i] = '=';
     }
-    for (int i = 1; i < 3; i++){     
-        for (int j = 0; j < 50; j++){                   
+    for (int i = 1; i < 3; i++)
+    {
+        for (int j = 0; j < 50; j++)
+        {
             tab[i][j] = '#';
         }
     }
-    for (int i = 0; i < 50; i++){
+    for (int i = 0; i < 50; i++)
+    {
         tab[29][i] = '_';
         tab[0][i] = '_';
     }
-    for (int i = 1; i < 30; i++){
+    for (int i = 1; i < 30; i++)
+    {
         tab[i][0] = '|';
         tab[i][49] = '|';
     }
+}
+
+char input()
+{
+    if (khbhit()) // lit l'input de l'utilisateur
+    {
+        return (char)getch(); // le renvoie
+    }
+    return 0; // sinon renvoie rien
 }
