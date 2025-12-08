@@ -83,7 +83,9 @@ void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlan
             dx = 1;
         }
     }
-
+    for (int i = -2; i < 3; i++){
+        tab[27][posPlanche+i] = '=';
+    }
     tab[balleY][balleX] = 'O';
 }
 
