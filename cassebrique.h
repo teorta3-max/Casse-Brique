@@ -8,12 +8,15 @@
 
 void remplirTableau(char tab[30][50]);
 void afficherTableau(char tab[30][50]);
-void updateTableau(char tab[30][50], int posPlanche);
+void updateTableau(char tab[30][50], int posPlanche, int tour);
 void TableauDeBase(char tab[30][50]);
 char input();
 int analyze_input(char input, int pos, int loop);
 int quit(int loop, char input);
 int score(char tab[30][50]);
 int game_over();
+int scorefinale(int score);
+int rejouer(int loop1);
+int main();
 
 #endif

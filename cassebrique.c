@@ -1,5 +1,4 @@
 #include "cassebrique.h"
-
 int balleX = 25;
 int balleY = 26;
 int dx = -1;
@@ -54,8 +53,13 @@ void TableauDeBase(char tab[30][50])
     }
 }
 
-void updateTableau(char tab[30][50], int posPlanche)
+void updateTableau(char tab[30][50], int posPlanche,int tour)
 {
+    if (tour > 1){
+        int balleX = 25;
+        int balleY = 26;
+    }
+
     tab[balleY][balleX] = ' ';
 
     balleX += dx;
@@ -149,6 +153,30 @@ int score(char tab[30][50])
         }
     }
     return score;
+}
+
+int rejouer(int loop1)
+{
+    char reponse;
+    printf("Voulez-vous rejouer ? (o/n) : ");
+    scanf(" %c", &reponse);
+    if (reponse == 'o' || reponse == 'O')
+    {
+        loop1 = 1;
+    }
+    else
+    {
+        printf("A plus!\n");
+        loop1 = 0;
+    }
+    return loop1;
+}
+
+int scorefinale(int score)
+{
+    int total_score = 0;
+    total_score += score;
+    return total_score;
 }
 
 // Ajout de game over
