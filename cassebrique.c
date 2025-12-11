@@ -98,7 +98,11 @@ void updateTableau(char tab[30][50], int posPlanche)
         tab[27][posPlanche + 3] = ' ';
     }
     
-    
+    if (balleY >= 28) {
+        printf("GAME OVER !\n");
+        Sleep(2000);
+        exit(0);
+    }
     tab[balleY][balleX] = 'O';
 }
 
@@ -135,3 +139,4 @@ int quit(int loop, char input)
     }
     return 1;
 }
+
