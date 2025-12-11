@@ -8,9 +8,10 @@
 
 void remplirTableau(char tab[30][50]);
 void afficherTableau(char tab[30][50]);
-void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlanche);
+void updateTableau(char tab[30][50], int posPlanche);
 void TableauDeBase(char tab[30][50]);
 char input();
 int analyze_input(char input, int pos, int loop);
 int quit(int loop, char input);
+
 #endif

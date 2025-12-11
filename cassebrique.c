@@ -54,7 +54,7 @@ void TableauDeBase(char tab[30][50])
     }
 }
 
-void updateTableau(char tab[30][50], int posballe_X, int posballe_Y, int posPlanche)
+void updateTableau(char tab[30][50], int posPlanche)
 {
     tab[balleY][balleX] = ' ';
 
