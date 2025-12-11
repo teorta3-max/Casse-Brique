@@ -20,11 +20,16 @@ int main()
 
     while (loop == 1)
     {
-        Sleep(100);
+        Sleep(50);
         posPlat_x -= analyze_input(input(), posPlat_x, loop);
         system("cls");
         updateTableau(grille, posPlat_x);
         afficherTableau(grille);
         loop = quit(loop, input());
+        if (game_over() == 1)
+        {
+            loop = 0;
+        }
     }
+    printf("Votre score est de : %d\n", score(grille));
 }

@@ -98,11 +98,6 @@ void updateTableau(char tab[30][50], int posPlanche)
         tab[27][posPlanche + 3] = ' ';
     }
     
-    if (balleY >= 28) {
-        printf("GAME OVER !\n");
-        Sleep(2000);
-        exit(0);
-    }
     tab[balleY][balleX] = 'O';
 }
 
@@ -140,3 +135,28 @@ int quit(int loop, char input)
     return 1;
 }
 
+int score(char tab[30][50])
+{
+    int score = 0;
+    for (int i = 1; i < 3; i++)
+    {
+        for (int j = 1; j < 49; j++)
+        {
+            if (tab[i][j] == ' ')
+            {
+                score += 10;
+            }
+        }
+    }
+    return score;
+}
+
+// Ajout de game over
+int game_over()
+{
+    if (balleY >= 28)
+    {
+        return 1;
+    }
+    return 0;
+}
