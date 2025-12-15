@@ -1,4 +1,7 @@
 #include "cassebrique.h"
+
+// !!!! PAS DE VARIABLES GLOBALES !!!
+
 int balleX = 25;
 int balleY = 26;
 int dx = -1;

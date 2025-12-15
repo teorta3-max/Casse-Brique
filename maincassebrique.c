@@ -13,7 +13,8 @@ int main(){
     int dep_y = 0;      // verticale
     
     while (loop1 == 1){
-        if (loop1 == 1) {
+        if (loop1 == 1) {  // Forcement vrai sinon on n'est pas dans le while !!
+            
             int posPlat_x = 25; // position initiale de la planche
             remplirTableau(grille);
             TableauDeBase(grille);
